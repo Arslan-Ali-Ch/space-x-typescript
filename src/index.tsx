@@ -3,13 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {gql,ApolloProvider,InMemoryCache,ApolloClient} from '@apollo/client';
+import {BrowserRouter as Router } from 'react-router-dom';
 
+const client=new ApolloClient({
+  uri:'https://spacexdata.herokuapp.com/graphql',
+  cache:new InMemoryCache()
+})
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+   <ApolloProvider client={client}>
+   <Router>
+   <App />
+   </Router>
+   </ApolloProvider>
   </React.StrictMode>
 );
 

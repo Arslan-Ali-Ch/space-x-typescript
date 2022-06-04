@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../../img/space.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+img{
+    align-self: center;
+    transform: rotate(230deg);
+    animation: image  12s  infinite;
+transition: 0.9s;
+}
+
+@keyframes image {
+    
+    0%,100%{
+        transform: rotate(60deg) translateX(150px) ;
+        
+    }
+    20%{
+        transform: scale(1) translateY(150px);
+        
+    }
+    30%{
+        transform: translateY(-150px);
+    }
+    60%{
+        transform: rotate(180deg) ;
+        transform-origin: top;
+    }
+    90%{
+        transform: rotate(180deg) translateY(-150px);
+        
+    }
+    
+}
+.link{
+   
+    text-decoration: none;
+    align-self: center;
+    margin-top: 100px;
+}

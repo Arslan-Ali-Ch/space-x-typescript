@@ -1,24 +1,22 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Index from './components/launches/index';
+import Info from './components/launchesInfo/Info';
+import Home from './components/home/home';
+import { Route, Routes } from 'react-router-dom';
+import Space from './components/spacex/Space';
 function App() {
+  // const [id,setid]=useState('');
+  // const handleIdChange = useCallback((newId:any) => {
+  //   setid(newId);
+  // }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+    <Routes>
+      <Route path='/' element={<Home></Home>}></Route>
+      <Route path='/space' element={<Space></Space>}></Route>
+    </Routes>
     </div>
   );
 }

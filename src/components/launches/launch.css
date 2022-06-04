@@ -1,0 +1,17 @@
+.lunchli{
+    margin: 1px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.lunchli:hover{
+    background-color: white;
+    color: black;
+}
+.launch{
+    height: 100vh;
+  flex:0 0 20vw;
+  overflow-y: auto;
+  }
+  
